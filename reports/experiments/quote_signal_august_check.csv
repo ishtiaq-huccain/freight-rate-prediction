@@ -1,0 +1,15 @@
+setup,model,quote_signal,MAE clean,MAE all,MAPE% clean,bias clean
+train Jan-Jul,grouped_median,no,77.91,128.9,3.68,32.43
+train Jan-Jul,blend_70,yes,48.4,99.87,2.31,-14.27
+train Jan-Jul,blend_70_noqs,no,42.66,94.31,1.87,-22.0
+train Jan-Jul,hgb_r3,yes,55.12,106.48,2.73,-14.75
+train Jan-Jul,hgb_r3_noqs,no,45.01,96.65,1.99,-25.91
+train Jan-Jul,ridge_r3,yes,51.93,103.41,2.17,-12.3
+train Jan-Jul,ridge_r3_noqs,no,51.3,102.79,2.16,-12.35
+train Jan-Jun,grouped_median,no,75.67,126.7,3.59,22.38
+train Jan-Jun,blend_70,yes,57.74,109.05,2.82,-29.5
+train Jan-Jun,blend_70_noqs,no,51.48,102.98,2.24,-40.26
+train Jan-Jun,hgb_r3,yes,67.34,118.49,3.36,-32.56
+train Jan-Jun,hgb_r3_noqs,no,58.34,109.75,2.53,-50.01
+train Jan-Jun,ridge_r3,yes,55.59,107.0,2.38,-21.35
+train Jan-Jun,ridge_r3_noqs,no,53.04,104.52,2.24,-16.84

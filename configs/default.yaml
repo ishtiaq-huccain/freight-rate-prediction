@@ -1,0 +1,66 @@
+# Paths are relative to the project root.
+paths:
+  train: data/train_test.csv
+  validation: data/validation.csv
+  validation_template: data/validation_predictions_template.csv
+  december_inputs: data/december_chart_inputs.csv
+  validation_predictions: validation_predictions.csv
+  # The assessment asks for the December file to be filled in place.
+  december_predictions: data/december_chart_inputs.csv
+  model_artifact: artifacts/model.joblib
+  eda_dir: reports/eda
+  artifacts_dir: artifacts
+
+seed: 42
+
+# Cleaning rules (see docs/phase1_data_audit.md). Learned values are always
+# fitted on the training window only.
+cleaning:
+  # A training label is treated as corrupted when its rate per mile is outside
+  # [low, high] x the median of its equipment x distance-bin cell.
+  anomaly_low_ratio: 0.5
+  anomaly_high_ratio: 2.0
+  anomaly_distance_bins: 10
+
+# Rolling-origin validation. Each test window is two months long, matching the
+# Nov-Dec forecast horizon. "selection" folds are used to compare models;
+# the "final" fold is the untouched confirmation holdout.
+validation:
+  folds:
+    - {name: fold_1, role: selection, train_end: 2025-04-30, test_start: 2025-05-01, test_end: 2025-06-30}
+    - {name: fold_2, role: selection, train_end: 2025-06-30, test_start: 2025-07-01, test_end: 2025-08-31}
+    - {name: holdout, role: final, train_end: 2025-08-31, test_start: 2025-09-01, test_end: 2025-10-31}
+  # Unseen-city simulation: hide n_cities training cities from the training
+  # window and score test loads with exactly one endpoint in a hidden city.
+  city_holdout:
+    n_cities: 8
+    n_repeats: 3
+
+# Feature sets are lists of group names from freight_rate.features.build.FEATURE_GROUPS.
+feature_sets:
+  base: [log_distance, equipment, weight, weight_missing, market_index, market_index_missing,
+         quote_signal, coords]
+  # base minus the missing-value flags (no effect in the Phase 4 ablation) and minus
+  # quote_signal: its relationship with price flips sign by month and is absent in
+  # Nov-Dec (see freight_rate.data.quality and docs/phase4_model_selection.md, round 6).
+  final: [log_distance, equipment, weight, market_index, coords]
+
+# Candidate models (built by freight_rate.models.registry).
+models:
+  global_median: {type: global_median}
+  grouped_median: {type: grouped_median, n_bins: 10}
+  ridge: {type: ridge, features: base, alpha: 1.0, spline_knots: 6}
+  hgb:
+    type: hgb
+    features: base
+    params: {max_iter: 300, learning_rate: 0.05, max_leaf_nodes: 31, min_samples_leaf: 40,
+             early_stopping: false}
+  final_hgb: {extends: hgb, features: final, recency_half_life_days: 30}
+  final_ridge: {extends: ridge, features: final, recency_half_life_days: 30}
+  final: {type: blend, members: [final_hgb, final_ridge], weights: [0.7, 0.3]}
+
+# --- Selected model (Phase 4, docs/phase4_model_selection.md) ------------------
+# 70/30 blend (in log space) of HistGradientBoosting and Ridge, both trained on
+# log(rate) with 30-day recency weighting and corrupted labels removed.
+# Features: log distance, equipment, weight, market_index, coordinates.
+final_model: final

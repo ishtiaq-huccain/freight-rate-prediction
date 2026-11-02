@@ -1,0 +1,5 @@
+model,MAE all,MAE clean,RMSE clean,MAPE% clean,bias clean,MAE clean m1,MAE clean m2,MAE clean fold_1,MAE clean fold_2,MAE unseen city,"MAE same loads, city seen",unseen-city cost %,sec per fit
+global_median,245.4,194.49,267.38,9.42,10.12,184.65,204.63,189.83,199.15,203.77,202.35,0.7,0.07
+grouped_median,167.96,115.87,156.41,4.99,-79.2,107.19,124.76,148.57,83.16,119.3,119.54,-0.2,0.08
+ridge,114.28,61.52,91.4,2.62,-36.5,52.52,70.79,63.96,59.09,63.04,61.92,1.82,0.15
+hgb,109.0,56.28,85.91,2.47,-32.53,37.1,76.05,53.3,59.27,57.97,57.11,1.51,1.5

@@ -1,0 +1,81 @@
+fold,role,scenario,segment,n,mae,rmse,median_ae,mape_pct,bias,repeat,cities,model
+fold_1,selection,temporal,all,9696,241.77970845209802,671.8427748792919,153.93001613527832,11.894492105669407,-82.40138181770078,,,global_median
+fold_1,selection,temporal,clean,9571,189.83155297030257,244.8749759174503,151.75822382857882,9.817576301425204,-51.11345753099696,,,global_median
+fold_1,selection,temporal,clean_month_1,4851,180.14754766030552,237.2805161782327,142.35647089195845,9.224896543253799,-22.03580784185555,,,global_median
+fold_1,selection,temporal,clean_month_2,4720,199.78433046157286,252.44225534699356,163.28418065057434,10.426705434240773,-80.99813520939209,,,global_median
+fold_1,selection,cities_unseen,clean,2328,187.80933094532253,247.59654325381626,146.18028093902558,9.417196883888813,-24.04972890532842,0.0,"Bakersfield, Hartford, Memphis, New York, San Antonio, Toledo, Tulsa, Washington",global_median
+fold_1,selection,cities_seen,clean,2328,187.29783389823444,244.78932340374593,146.81341325674475,9.509046000171482,-34.980139535224076,0.0,"Bakersfield, Hartford, Memphis, New York, San Antonio, Toledo, Tulsa, Washington",global_median
+fold_1,selection,cities_unseen,clean,2085,196.91974065034077,255.32464264083072,157.98975528565052,9.65304964150963,-46.49411582507309,1.0,"Baton Rouge, Charleston, Green Bay, Houston, Jacksonville, Las Vegas, New York, Reno",global_median
+fold_1,selection,cities_seen,clean,2085,197.03515591337438,254.95781780644216,159.34744094488178,9.677799352628224,-48.65448697027914,1.0,"Baton Rouge, Charleston, Green Bay, Houston, Jacksonville, Las Vegas, New York, Reno",global_median
+fold_1,selection,cities_unseen,clean,2046,203.74959370182907,257.437954917673,166.69554387019218,10.683093790353265,-39.70048492690942,2.0,"Atlanta, Bakersfield, Cincinnati, Harrisburg, Little Rock, Salt Lake City, San Francisco, Tulsa",global_median
+fold_1,selection,cities_seen,clean,2046,203.88493445133938,258.0449889755172,166.86096392151802,10.658592589073695,-37.3535604618998,2.0,"Atlanta, Bakersfield, Cincinnati, Harrisburg, Little Rock, Salt Lake City, San Francisco, Tulsa",global_median
+fold_2,selection,temporal,all,9671,249.01625564541692,674.7212392302561,135.52857296088467,11.163427165927036,40.00972214019889,,,global_median
+fold_2,selection,temporal,clean,9538,199.15166996254848,289.87591313538104,133.12650791151248,9.027826247238377,71.34652431147067,,,global_median
+fold_2,selection,temporal,clean_month_1,4847,189.16112282457203,266.9206581807714,135.97273823921978,8.94624650845719,34.66465191905052,,,global_median
+fold_2,selection,temporal,clean_month_2,4691,209.4744544387309,311.82447006733463,129.56689160847338,9.112118934058335,109.24825858690458,,,global_median
+fold_2,selection,cities_unseen,clean,2155,233.30121022185233,336.4976354125643,147.5195031671717,9.439126718958837,118.89524355865773,0.0,"Chattanooga, Green Bay, Harrisburg, Mobile, Phoenix, Salt Lake City, Savannah, Tucson",global_median
+fold_2,selection,cities_seen,clean,2155,228.50319987143976,327.7052797298016,148.0167217733972,9.387484480557342,107.72705595296907,0.0,"Chattanooga, Green Bay, Harrisburg, Mobile, Phoenix, Salt Lake City, Savannah, Tucson",global_median
+fold_2,selection,cities_unseen,clean,1869,221.54817544922088,329.1347511579659,129.9765442510943,8.64375590082852,128.33098451509724,1.0,"Fort Wayne, Fresno, Green Bay, Harrisburg, New Orleans, Salt Lake City, St. Louis, Syracuse",global_median
+fold_2,selection,cities_seen,clean,1869,216.09190506339192,319.24116243664446,131.1608760821382,8.559551123608683,116.18086727800137,1.0,"Fort Wayne, Fresno, Green Bay, Harrisburg, New Orleans, Salt Lake City, St. Louis, Syracuse",global_median
+fold_2,selection,cities_unseen,clean,2277,179.2890822325602,255.2534292391909,129.43962898489121,8.93303301510946,30.316282520156456,2.0,"Buffalo, Cincinnati, El Paso, Houston, Little Rock, Mobile, Syracuse, Tulsa",global_median
+fold_2,selection,cities_seen,clean,2277,181.26697555355156,260.6544998700316,129.0284578788096,8.908197556444591,39.4995714617124,2.0,"Buffalo, Cincinnati, El Paso, Houston, Little Rock, Mobile, Syracuse, Tulsa",global_median
+fold_1,selection,temporal,all,9696,201.13604302868714,664.5322150005866,114.01586092741388,8.293948831525075,-173.3285623806963,,,grouped_median
+fold_1,selection,temporal,clean,9571,148.57132590410237,197.38537433848876,111.95340079893458,6.173000959491412,-141.78941472674018,,,grouped_median
+fold_1,selection,temporal,clean_month_1,4851,123.81135471244998,165.46400038854856,90.02132599125798,5.2586460179926995,-113.59642378778167,,,grouped_median
+fold_1,selection,temporal,clean_month_2,4720,174.01849121145526,225.53293376684698,138.8834684702431,7.112733125002056,-170.76488062608078,,,grouped_median
+fold_1,selection,cities_unseen,clean,2328,149.91938448796233,198.16478519871484,110.47379168538077,6.132931082425527,-142.75337229994634,0.0,"Bakersfield, Hartford, Memphis, New York, San Antonio, Toledo, Tulsa, Washington",grouped_median
+fold_1,selection,cities_seen,clean,2328,152.18814994977126,200.76773888252768,111.90484227790887,6.210159114625548,-145.61741624439003,0.0,"Bakersfield, Hartford, Memphis, New York, San Antonio, Toledo, Tulsa, Washington",grouped_median
+fold_1,selection,cities_unseen,clean,2085,148.67078649363924,194.08764576430102,115.90572580645176,6.197522196176857,-140.34739915174492,1.0,"Baton Rouge, Charleston, Green Bay, Houston, Jacksonville, Las Vegas, New York, Reno",grouped_median
+fold_1,selection,cities_seen,clean,2085,149.00974074882362,194.63149554191114,116.66115760656999,6.182154640267729,-141.07347738658865,1.0,"Baton Rouge, Charleston, Green Bay, Houston, Jacksonville, Las Vegas, New York, Reno",grouped_median
+fold_1,selection,cities_unseen,clean,2046,158.42639285317375,210.06690711773595,119.06128610175472,6.487429972707324,-153.72501771878848,2.0,"Atlanta, Bakersfield, Cincinnati, Harrisburg, Little Rock, Salt Lake City, San Francisco, Tulsa",grouped_median
+fold_1,selection,cities_seen,clean,2046,158.7124393665798,210.60658414489043,117.99498129928537,6.463493144914248,-154.42235019943774,2.0,"Atlanta, Bakersfield, Cincinnati, Harrisburg, Little Rock, Salt Lake City, San Francisco, Tulsa",grouped_median
+fold_2,selection,temporal,all,9671,134.78412131802696,630.9411466762273,59.33072211821343,6.033497377008403,-47.85410314275031,,,grouped_median
+fold_2,selection,temporal,clean,9538,83.15986845672535,115.43815685343674,58.40212501309884,3.7978039602539475,-16.61710568311935,,,grouped_median
+fold_2,selection,temporal,clean_month_1,4847,90.57170073778964,125.21936950675182,62.246884933318086,4.009848494883856,-54.08302447320194,,,grouped_median
+fold_2,selection,temporal,clean_month_2,4691,75.5015544370454,104.37320310326045,54.67780713574302,3.578707848688999,22.094748585806304,,,grouped_median
+fold_2,selection,cities_unseen,clean,2155,89.89907761966899,124.53306083434875,63.04650871593424,3.733289242742874,-18.46347166531423,0.0,"Chattanooga, Green Bay, Harrisburg, Mobile, Phoenix, Salt Lake City, Savannah, Tucson",grouped_median
+fold_2,selection,cities_seen,clean,2155,89.24897503264422,123.78386724069522,61.725382051892325,3.716077694001505,-17.637068847564088,0.0,"Chattanooga, Green Bay, Harrisburg, Mobile, Phoenix, Salt Lake City, Savannah, Tucson",grouped_median
+fold_2,selection,cities_unseen,clean,1869,88.44767186677394,122.58782725125636,63.96896324042973,3.8208946861056607,7.684900269659129,1.0,"Fort Wayne, Fresno, Green Bay, Harrisburg, New Orleans, Salt Lake City, St. Louis, Syracuse",grouped_median
+fold_2,selection,cities_seen,clean,1869,87.4602642111981,121.45155226130504,62.86138271604932,3.7620597910116724,1.6436061123978067,1.0,"Fort Wayne, Fresno, Green Bay, Harrisburg, New Orleans, Salt Lake City, St. Louis, Syracuse",grouped_median
+fold_2,selection,cities_unseen,clean,2277,80.41645817193765,109.95834548362492,59.04677570425133,3.9464803207058705,-14.35927778489841,2.0,"Buffalo, Cincinnati, El Paso, Houston, Little Rock, Mobile, Syracuse, Tulsa",grouped_median
+fold_2,selection,cities_seen,clean,2277,80.60146189225962,110.86231935218849,58.24657290419282,3.9112077098950393,-15.812873509105469,2.0,"Buffalo, Cincinnati, El Paso, Houston, Little Rock, Mobile, Syracuse, Tulsa",grouped_median
+fold_1,selection,temporal,all,9696,117.52215587924888,635.6832109868258,40.76484594492763,4.833314198676472,-66.10366771508974,,,ridge
+fold_1,selection,temporal,clean,9571,63.959396798915954,99.1113711067146,40.210617111073134,2.581239958666379,-34.61686856557872,,,ridge
+fold_1,selection,temporal,clean_month_1,4851,51.46605438275184,76.90661596692138,34.16332185716249,2.204607934433226,-6.3520612832461145,,,ridge
+fold_1,selection,temporal,clean_month_2,4720,76.79948240502023,117.643426736924,48.01923405949037,2.968325117470409,-63.66614401612862,,,ridge
+fold_1,selection,cities_unseen,clean,2328,66.01029590797475,105.62517692950347,40.54720281525488,2.602859174169491,-42.156869496475,0.0,"Bakersfield, Hartford, Memphis, New York, San Antonio, Toledo, Tulsa, Washington",ridge
+fold_1,selection,cities_seen,clean,2328,63.426476050750274,98.57955807153267,39.819144671383015,2.5355056229113226,-39.41948681284394,0.0,"Bakersfield, Hartford, Memphis, New York, San Antonio, Toledo, Tulsa, Washington",ridge
+fold_1,selection,cities_unseen,clean,2085,64.58946787736832,96.13594130011421,42.41836835682079,2.5717503390984673,-32.33522382061014,1.0,"Baton Rouge, Charleston, Green Bay, Houston, Jacksonville, Las Vegas, New York, Reno",ridge
+fold_1,selection,cities_seen,clean,2085,64.12605966718868,95.23473171561227,42.57621534908526,2.5535547687848243,-32.58346777140012,1.0,"Baton Rouge, Charleston, Green Bay, Houston, Jacksonville, Las Vegas, New York, Reno",ridge
+fold_1,selection,cities_unseen,clean,2046,69.76169736044385,116.34803447616781,40.488450445850276,2.6481534648123173,-44.29617661692946,2.0,"Atlanta, Bakersfield, Cincinnati, Harrisburg, Little Rock, Salt Lake City, San Francisco, Tulsa",ridge
+fold_1,selection,cities_seen,clean,2046,67.70921800065587,109.36447323282616,39.92933114721575,2.6013623533838173,-42.65992242332588,2.0,"Atlanta, Bakersfield, Cincinnati, Harrisburg, Little Rock, Salt Lake City, San Francisco, Tulsa",ridge
+fold_2,selection,temporal,all,9671,111.04329284093622,625.5469126443742,42.84553135440706,4.881232011263498,-69.59105709032842,,,ridge
+fold_2,selection,temporal,clean,9538,59.089586614380345,83.68383431513244,42.13800815682475,2.659123356735247,-38.389466558714155,,,ridge
+fold_2,selection,temporal,clean_month_1,4847,53.58197777176216,75.51219691378229,38.28424782300499,2.4079124202446422,-23.113006729015922,,,ridge
+fold_2,selection,temporal,clean_month_2,4691,64.78035192245333,91.36267159307907,46.64815344519138,2.9186883554924323,-54.17394764900349,,,ridge
+fold_2,selection,cities_unseen,clean,2155,59.0819831669675,85.30562246191981,39.26525641507078,2.404006955080462,-17.691558076329105,0.0,"Chattanooga, Green Bay, Harrisburg, Mobile, Phoenix, Salt Lake City, Savannah, Tucson",ridge
+fold_2,selection,cities_seen,clean,2155,58.398340841814665,82.86691367655078,40.514223929503714,2.4070869285966867,-26.304987752106225,0.0,"Chattanooga, Green Bay, Harrisburg, Mobile, Phoenix, Salt Lake City, Savannah, Tucson",ridge
+fold_2,selection,cities_unseen,clean,1869,61.80088960950741,91.32886919951119,42.606155325698865,2.5355602090554803,-35.674928641114846,1.0,"Fort Wayne, Fresno, Green Bay, Harrisburg, New Orleans, Salt Lake City, St. Louis, Syracuse",ridge
+fold_2,selection,cities_seen,clean,1869,61.57850587505981,89.0240262801834,42.931298953039914,2.558798150123129,-37.5519395733143,1.0,"Fort Wayne, Fresno, Green Bay, Harrisburg, New Orleans, Salt Lake City, St. Louis, Syracuse",ridge
+fold_2,selection,cities_unseen,clean,2277,57.021938590366474,75.08468410354888,44.456025848166064,2.829069522663864,-39.00929599192546,2.0,"Buffalo, Cincinnati, El Paso, Houston, Little Rock, Mobile, Syracuse, Tulsa",ridge
+fold_2,selection,cities_seen,clean,2277,56.257116026439554,74.4705097082461,43.46643779031001,2.7744494037121923,-38.55320884887117,2.0,"Buffalo, Cincinnati, El Paso, Houston, Little Rock, Mobile, Syracuse, Tulsa",ridge
+fold_1,selection,temporal,all,9696,106.88807577926654,632.450745185184,31.80983113161767,4.398594168377165,-67.61732721966109,,,hgb
+fold_1,selection,temporal,clean,9571,53.29782167798141,86.21851212873759,31.209653955529575,2.1474008867360026,-36.18223988970892,,,hgb
+fold_1,selection,temporal,clean_month_1,4851,33.95606841359756,50.65562376083071,21.73793549822858,1.455250829028189,-16.28824741748919,,,hgb
+fold_1,selection,temporal,clean_month_2,4720,73.17639055203354,111.51846965278067,45.48027640845612,2.8587610413844358,-56.62837494961101,,,hgb
+fold_1,selection,cities_unseen,clean,2328,57.52735507912819,91.69087990718928,34.333539608266165,2.3572039354651824,-44.18418115281154,0.0,"Bakersfield, Hartford, Memphis, New York, San Antonio, Toledo, Tulsa, Washington",hgb
+fold_1,selection,cities_seen,clean,2328,54.0311362241076,85.59317048565285,31.860060013965438,2.181668118786203,-38.310001139686044,0.0,"Bakersfield, Hartford, Memphis, New York, San Antonio, Toledo, Tulsa, Washington",hgb
+fold_1,selection,cities_unseen,clean,2085,52.65080520931965,80.78704015627666,32.16549848398927,2.1302940486212,-32.635653834217614,1.0,"Baton Rouge, Charleston, Green Bay, Houston, Jacksonville, Las Vegas, New York, Reno",hgb
+fold_1,selection,cities_seen,clean,2085,53.87957869371709,84.32790902766975,33.035118149044365,2.169246583075734,-36.15173735341493,1.0,"Baton Rouge, Charleston, Green Bay, Houston, Jacksonville, Las Vegas, New York, Reno",hgb
+fold_1,selection,cities_unseen,clean,2046,56.72275501546697,95.54039465194452,31.402313150549276,2.206758525497532,-41.88772687384496,2.0,"Atlanta, Bakersfield, Cincinnati, Harrisburg, Little Rock, Salt Lake City, San Francisco, Tulsa",hgb
+fold_1,selection,cities_seen,clean,2046,54.12689322951392,90.20579500237821,29.963529691361373,2.095528966644352,-35.59451752509375,2.0,"Atlanta, Bakersfield, Cincinnati, Harrisburg, Little Rock, Salt Lake City, San Francisco, Tulsa",hgb
+fold_2,selection,temporal,all,9671,111.10581010442709,624.4531010221233,40.30318517117439,5.004750194426873,-60.28085641814543,,,hgb
+fold_2,selection,temporal,clean,9538,59.270437143508694,85.59993113074054,39.43114887799504,2.798140255783113,-28.883668079997776,,,hgb
+fold_2,selection,temporal,clean_month_1,4847,40.242582593754406,58.596929580272516,26.32956138513623,1.7597957681080234,-22.60492661495276,,,hgb
+fold_2,selection,temporal,clean_month_2,4691,78.93106622103141,106.53911729660992,59.22089009076626,3.8710150653676716,-35.3712101565429,,,hgb
+fold_2,selection,cities_unseen,clean,2155,62.69093675859788,89.72173604688085,42.209604730277306,2.729931931866892,-24.58279798741949,0.0,"Chattanooga, Green Bay, Harrisburg, Mobile, Phoenix, Salt Lake City, Savannah, Tucson",hgb
+fold_2,selection,cities_seen,clean,2155,62.80051442381634,90.94934534740976,42.08023668606825,2.736498819443996,-26.97146043538363,0.0,"Chattanooga, Green Bay, Harrisburg, Mobile, Phoenix, Salt Lake City, Savannah, Tucson",hgb
+fold_2,selection,cities_unseen,clean,1869,59.53271544994666,85.44395309435228,39.25478514218594,2.5520385613335237,-24.771321581044056,1.0,"Fort Wayne, Fresno, Green Bay, Harrisburg, New Orleans, Salt Lake City, St. Louis, Syracuse",hgb
+fold_2,selection,cities_seen,clean,1869,58.904025530273096,84.86559140025652,37.52449678702044,2.565487309479344,-24.735840338001363,1.0,"Fort Wayne, Fresno, Green Bay, Harrisburg, New Orleans, Salt Lake City, St. Louis, Syracuse",hgb
+fold_2,selection,cities_unseen,clean,2277,58.69075576788092,85.27213645130276,38.332495238283286,2.932006827065518,-29.42997407765603,2.0,"Buffalo, Cincinnati, El Paso, Houston, Little Rock, Mobile, Syracuse, Tulsa",hgb
+fold_2,selection,cities_seen,clean,2277,58.88981673105295,85.1286785535662,39.66027931734584,2.953658633682604,-30.643186324844084,2.0,"Buffalo, Cincinnati, El Paso, Houston, Little Rock, Mobile, Syracuse, Tulsa",hgb

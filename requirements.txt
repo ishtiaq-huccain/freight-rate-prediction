@@ -1,0 +1,21 @@
+# Everything needed to reproduce the submission, run the tests and open the notebook.
+# Tested with Python 3.13.3, matplotlib 3.11.2, numpy 2.5.4, pandas 2.3.3, scikit-learn 1.7.2.
+
+# Scorer (score.py)
+matplotlib>=3.8,<4
+numpy>=1.26,<3
+pandas>=2.0,<3
+
+# Model, config and report
+scikit-learn>=1.5,<1.8
+pyyaml>=6,<7
+python-docx>=1.1,<2
+
+# Tests and lint
+pytest>=8,<10
+ruff>=0.5
+
+# EDA notebook (kernel and headless execution)
+ipykernel>=6.29,<8
+nbconvert>=7.16,<8
+nbformat>=5.10,<6

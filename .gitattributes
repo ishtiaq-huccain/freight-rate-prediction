@@ -1,0 +1,5 @@
+# Keep the provided and submitted files byte-exact on every OS.
+# The tests check their SHA-256 hashes and byte-for-byte reproducibility.
+score.py -text
+data/*.csv -text
+validation_predictions.csv -text

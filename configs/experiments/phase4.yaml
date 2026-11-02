@@ -1,0 +1,45 @@
+# Phase 4 experiment variants. Merged into configs/default.yaml by
+#   python -m freight_rate.pipelines.experiment --extra-config configs/experiments/phase4.yaml ...
+# Each variant changes one thing relative to its parent (`extends`).
+
+models:
+  # --- Round 1: the month-2 under-prediction (price drift beyond market_index)
+  hgb_time: {extends: hgb, features_add: [time_index]}
+  hgb_recency_30: {extends: hgb, recency_half_life_days: 30}
+  hgb_recency_60: {extends: hgb, recency_half_life_days: 60}
+  hgb_recency_120: {extends: hgb, recency_half_life_days: 120}
+  hgb_time_recency_60: {extends: hgb_time, recency_half_life_days: 60}
+  ridge_time: {extends: ridge, features_add: [time_index]}
+  ridge_recency_60: {extends: ridge, recency_half_life_days: 60}
+
+  # --- Round 2: ablations on the round-1 winner (one change each)
+  hgb_r30_no_quote: {extends: hgb_recency_30, features_drop: [quote_signal]}
+  hgb_r30_no_coords: {extends: hgb_recency_30, features_drop: [coords]}
+  hgb_r30_no_weight: {extends: hgb_recency_30, features_drop: [weight, weight_missing]}
+  hgb_r30_no_flags: {extends: hgb_recency_30, features_drop: [weight_missing, market_index_missing]}
+  hgb_r30_no_market: {extends: hgb_recency_30, features_drop: [market_index, market_index_missing]}
+  hgb_r30_dow: {extends: hgb_recency_30, features_add: [day_of_week]}
+  hgb_r30_abs_loss: {extends: hgb_recency_30, params: {loss: absolute_error}}
+  hgb_r30_keep_anomalies: {extends: hgb_recency_30, drop_anomalies: false}
+  hgb_r30_keep_anomalies_abs: {extends: hgb_r30_keep_anomalies, params: {loss: absolute_error}}
+
+  # --- Round 3: light tuning of the trimmed model, and an HGB + Ridge blend
+  hgb_r3: {extends: hgb_r30_no_flags}
+  hgb_r3_lr10: {extends: hgb_r3, params: {learning_rate: 0.1}}
+  hgb_r3_iter600: {extends: hgb_r3, params: {max_iter: 600}}
+  hgb_r3_lr03_iter1000: {extends: hgb_r3, params: {learning_rate: 0.03, max_iter: 1000}}
+  hgb_r3_leaves15: {extends: hgb_r3, params: {max_leaf_nodes: 15}}
+  hgb_r3_leaves63: {extends: hgb_r3, params: {max_leaf_nodes: 63}}
+  hgb_r3_minleaf20: {extends: hgb_r3, params: {min_samples_leaf: 20}}
+  hgb_r3_minleaf100: {extends: hgb_r3, params: {min_samples_leaf: 100}}
+  hgb_r3_l2: {extends: hgb_r3, params: {l2_regularization: 1.0}}
+  hgb_r3_hl15: {extends: hgb_r3, recency_half_life_days: 15}
+  hgb_r3_hl45: {extends: hgb_r3, recency_half_life_days: 45}
+  ridge_r3: {extends: ridge, features_drop: [weight_missing, market_index_missing], recency_half_life_days: 30}
+  blend_50: {type: blend, members: [hgb_r3, ridge_r3], weights: [0.5, 0.5]}
+  blend_70: {type: blend, members: [hgb_r3, ridge_r3], weights: [0.7, 0.3]}
+
+  # --- Round 6: quote_signal regimes (relationship flips by month; absent in Nov-Dec)
+  hgb_r3_noqs: {extends: hgb_r3, features_drop: [quote_signal]}
+  ridge_r3_noqs: {extends: ridge_r3, features_drop: [quote_signal]}
+  blend_70_noqs: {type: blend, members: [hgb_r3_noqs, ridge_r3_noqs], weights: [0.7, 0.3]}
